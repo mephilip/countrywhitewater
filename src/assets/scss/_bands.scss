@@ -1,0 +1,79 @@
+.band {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	margin-left: 4rem;
+    margin-right: 4rem;
+    @include breakpoint(medium down) {
+	    margin-right: 1rem;
+	    margin-left: 1rem;
+    }
+	div {
+		&.m_pad_bottom {
+			@include breakpoint(medium down) {
+				padding-bottom: 4rem;
+			}
+		}
+	}
+	
+	h1 {
+		font-size: 24px;
+		line-height: 28px;
+		a {
+			font-size: 24px;
+			line-height: 28px;
+			color: $secondary-color;
+		}
+	}
+	
+	h2 {
+		font-size: 20px;
+		color: $primary-color;
+	}
+	
+	h3{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	p,
+	li,
+	a {
+		font-size: 14px;
+		line-height: 21px;
+		&.fine_print {
+			font-size: 12px;
+			line-height: 16px;
+		}
+		&.secondary {
+			color: $secondary-color;
+		}
+	}
+	ul {
+		padding-left: 1rem;
+	}
+}
+
+.row {
+	&:not(:last-child) {
+		.band {
+			position: relative;
+		}
+	}
+}
+
+.divider {
+	position: relative;
+	&:after {
+		background: rgba(0,0,0,.05);
+		height: 2px;
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    padding: 0 2rem;
+	    width: 100%;
+		display: inline-block;	
+	    text-align: center;
+	    @include breakpoint(medium down) {
+		    padding: 0 0;
+	    }
+	}
+}

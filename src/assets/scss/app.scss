@@ -37,7 +37,7 @@
 @include foundation-sticky;
 @include foundation-reveal;
 @include foundation-switch;
-@include foundation-table;
+//@include foundation-table;
 @include foundation-tabs;
 @include foundation-thumbnail;
 @include foundation-title-bar;
@@ -53,4 +53,6 @@
 @import 'header';
 @import 'masthead';
 @import 'content_Types';
+@import 'bands';
 @import 'm_util';
+@import 'footer';
