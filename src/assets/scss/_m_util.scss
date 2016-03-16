@@ -12,3 +12,9 @@
 		}
 	}
 }
+
+.m_text_center {
+	@include breakpoint(medium down) {
+		text-align: center;
+	}
+}
