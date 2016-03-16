@@ -1,0 +1,14 @@
+.m_table {
+	@include breakpoint(small only) {
+		display: table;
+		.m_tr {
+			display: table-row;
+			.m_td {
+				display: table-cell;
+				vertical-align: middle;
+				min-height: 55px;
+				float: none !important;
+			}
+		}
+	}
+}

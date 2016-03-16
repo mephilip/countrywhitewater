@@ -1,0 +1,102 @@
+&#m_nav_main {
+	ul {
+		@include breakpoint (medium up) {
+			display: none;
+		}
+	}
+	@include breakpoint(small only) {
+		background: #fff6db;
+		ul {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			li {
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 10px;
+				transition: all .3s ease;
+				border-bottom: 1px solid rgba(0,0,0,.04);
+				cursor: pointer;
+				&:hover {
+					background: #2f1303;
+					transition: all .3s ease;
+					a {
+						color: white;
+						width: 100%
+					}
+				}
+				a {
+					color: #2f1303;
+					font-weight: 900;
+					letter-spacing: 1px;
+				}
+			}
+		}
+	}
+}
+
+header {
+	padding: 20px 0;
+	background: url('../img/header_bar.jpg');
+	box-shadow: 0px 3px 3px rgba(0,0,0,.5);
+	#logo_main {
+		@include breakpoint(medium down) {
+			padding-left: 20px;
+		}
+	}
+	nav {
+		&#nav_main {
+			margin-top: 30px;
+			justify-content: flex-end;
+			display: flex;
+			ul {
+				padding: 0;
+				margin: 0;
+				display: flex;
+				list-style: none;
+				li {
+					width: auto;
+					flex: 1 0 auto;
+					font-size: 18px;
+					text-align: center;
+					transition: all .3s ease;
+					&:not(:first-child){
+						margin-left: 60px;
+					}
+					a {
+						color: #fff6da;
+						font-weight: 800;
+					}
+					@include breakpoint(medium down) {
+						transition: all .3s ease;
+						width: auto;
+						font-size: 16px;
+						&:not(:first-child){
+							margin-left: 40px;
+						}
+					}
+				}
+			}
+		}
+		&#nav_social {
+			ul {
+				float: right;
+				padding: 0;
+				margin: 0;
+				@include breakpoint(medium down) {
+				}
+				li {
+					display: inline-block;
+					width: 40px;
+					text-align: right;
+				}
+			}
+		}
+	}
+	.menu_icon_wrapper {
+		display: inline-block;
+		float: right;
+		padding-right: 20px;
+	}
+}

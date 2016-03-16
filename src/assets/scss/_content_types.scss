@@ -1,0 +1,20 @@
+section {
+	&.bg_alt {
+		background-color: $body-background-alt;
+		.row {
+			background-color: white;
+			&.wrap_me {
+				padding-top: 2rem;
+				padding-bottom: 2rem;
+			}
+		}
+	}
+	h1,
+	h2,
+	h3 {color: $secondary-color;}
+	h4 {color: $primary-color; font-size: 16px; line-height: 22px;}
+	h1 {
+		font-size: 36px;
+		line-height: 42px;
+	}
+}

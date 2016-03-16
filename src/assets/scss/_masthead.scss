@@ -1,0 +1,83 @@
+@mixin reposition() {
+	position: absolute;
+	@include breakpoint(medium down) {
+		position: static;
+		max-width: none;
+	}
+	
+}
+
+section {
+	&#masthead {
+		position: relative;
+		//background-image: url('../img/masthead_main.jpg');
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		min-height: 700px;
+		#masthead_content {
+			margin-top: 70px;
+			@include breakpoint(medium down) {
+				margin-top: 30px;
+				padding: 0 2rem 1rem;
+			}
+			.masthead_paragraphs {
+				@include reposition;
+				top: 225px;
+				.lead_in {
+					padding-top: 100px;
+					font-size: 26px;
+					color: #6f8015;
+					max-width: 47%;
+					@include breakpoint(medium down) {
+						font-size: 28px;
+						max-width: none;
+						padding-top: 40px;
+						text-align: center;
+					}
+				}
+				.indent {
+					margin-left: 30px;
+					max-width: 45%;
+					@include breakpoint(medium down) {
+						max-width: none;
+						margin-left: 0;
+					}
+					text-align: justify;
+					a {
+						color: $secondary-color;
+					}
+				}
+			}
+			p {
+				font-size: 16px;
+			}
+		}
+		.masthead_main_wrapper {
+			@include reposition;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			&:after {
+				    background: url("../img/wood.jpg");
+				    height: 130px;
+				    width: 100%;
+				    display: block;
+				    @include reposition;
+				    content: '';
+				    bottom: 0;
+			}
+			img {
+				&#masthead_main{
+					@include reposition;
+					bottom: 130px;
+					right: 0;
+					z-index: -1;
+					max-width: 47%;
+					@include breakpoint(medium down) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
